@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Dados </title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="../img/desenvolvedor.png">
+    <link rel="stylesheet" href="../style/sytle.css">
+
+</head>
+
+<body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../html/index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../html/integrantes.html">Integrantes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Estruturas de Dados
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./btree.html"> Árvores B (B-Tree)</a></li>
+                            <li><a class="dropdown-item" href="./bmais.html">Árvores B+</a></li>
+                            <li><a class="dropdown-item" href="./baster.html">Árvores B*</a></li>
+                            <li><a class="dropdown-item" href="./redblack.html">Árvores Vermelho-preto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Card-->
+    <div class="card  w-75 m-auto my-5">
+        <div class="card">
+            <div class="card-header">
+                Algoritmos e Estruturas de Dados
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Árvores B-Tree</h5>
+                <p class="card-text">As árvores B são um tipo de árvores de busca que foram projetadas para minimizar o
+                    número de acessos à memória secundária. Como o número de acessos à memória secundária depende
+                    diretamente da altura da árvore, as árvores B foram projetadas para ter uma altura inferior às
+                    árvores rubro-negras ou AVL, para um dado número de chaves. Para manter o número de registros
+                    armazenados e, ao mesmo tempo, diminuir a altura, uma solução é aumentar o grau de ramificação da
+                    árvore (o número máximo de filhos que um nó pode ter). Assim árvores B são árvores de busca que
+                    possuem um grau de ramificação geralmente muito maior que 2. Além disso, a cada nó de uma árvore B
+                    são associados mais de um registro de dados: se o grau de ramificação de um nó for {\displaystyle
+                    g}{\displaystyle g}, este pode armazenar até {\displaystyle g-1}{\displaystyle g-1} registros. A
+                    figura abaixo mostra um exemplo de árvore B, com grau de ramificação dos nós de até 4.
+                    Árvore B ou B-Tree são estruturas de dados muito utilizadas em banco de dados e sistema de arquivos.
+
+                    Para inserir ou remover variáveis de um nó, o nó não poderá ultrapassar sua ordem e nem ser menor
+                    que sua ordem dividida por dois. Árvores B não precisam ser rebalanceadas como são freqüentemente as
+                    árvores de busca binária com Árvore AVL. Árvores B têm vantagens substanciais em relação a outros
+                    tipos de implementações quanto ao tempo de acesso e pesquisa aos nós.
+
+                    O criador das árvores B, Rudolf Bayer, não definiu claramente de onde veio o B das árvores B. Ao que
+                    parece, o B vem de balanceamento onde todos os nós da árvore estão em um mesmo nível. Também é
+                    possível que o B tenha vindo de seu sobrenome Bayer, ou ainda do nome da empresa onde trabalhava
+                    Boeing, no Boeing Scientific Research Labs.
+                </p>
+                <div class="card  w-75 m-auto my-5">
+                    <a href="#" class="btn btn-primary">Assista uma Demonstração</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Carousel-->
+    <div class="card  w-75 m-auto my-5">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/btree.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/btree_dois.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/btree_tres.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

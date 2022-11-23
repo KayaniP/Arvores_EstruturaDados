@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Dados </title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="../img/desenvolvedor.png">
+    <link rel="stylesheet" href="../style/sytle.css">
+
+</head>
+
+<body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../html/index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../html/integrantes.html">Integrantes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Estruturas de Dados
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./btree.html"> Árvores B (B-Tree)</a></li>
+                            <li><a class="dropdown-item" href="./bmais.html">Árvores B+</a></li>
+                            <li><a class="dropdown-item" href="./baster.html">Árvores B*</a></li>
+                            <li><a class="dropdown-item" href="./redblack.html">Árvores Vermelho-preto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Card-->
+    <div class="card  w-75 m-auto my-5">
+        <div class="card">
+            <div class="card-header">
+                Algoritmos e Estruturas de Dados
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Árvores Vermelho-preto</h5>
+                <p class="card-text">Uma árvore rubro-negra é um tipo de árvore binária de busca balanceada, uma
+                    estrutura de dados usada em ciência da computação, tipicamente para implementar vetores
+                    associativos. A estrutura original foi inventada em 1972, por Rudolf Bayer que a
+                    chamou de "Árvores Binárias B Simétricas", mas adquiriu este nome moderno em um artigo de 1978
+                    escrito por Leonidas J. Guibas e Robert Sedgewick.Ela é complexa, mas tem um bom pior-caso de
+                    tempo de execução para suas operações e é eficiente na prática: pode-se buscar, inserir, e remover
+                    em tempo O(log n), onde n é o número total de elementos da árvore. De maneira simplificada, uma
+                    árvore rubro-negra é uma árvore de busca binária que insere e remove de forma inteligente, para
+                    assegurar que a árvore permaneça aproximadamente balanceada.
+                </p>
+                <div class="card  w-75 m-auto my-5">
+                    <a href="#" class="btn btn-primary">Assista uma Demonstração</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Card 2-->
+    <div class="card  w-75 m-auto my-5">
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Propriedades</h5>
+                <p class="card-text">Uma árvore rubro-negra é uma árvore de busca binária onde cada nó tem um
+                    atributo de cor, vermelho ou preto. Além dos requisitos ordinários impostos pelas árvores de
+                    busca binárias, as árvores rubro-negras tem os seguintes requisitos adicionais.
+                    - Um nó é vermelho ou preto.
+                    A raiz é preta. (Esta regra é usada em algumas definições. Como a raiz pode sempre ser alterada
+                    de vermelho para preto, mas não sendo válido o oposto, esta regra tem pouco efeito na análise.)
+                    Todas as folhas(nil) são pretas.
+                    Ambos os filhos de todos os nós vermelhos são pretos.
+                    Todo caminho de um dado nó para qualquer de seus nós folhas descendentes contem o mesmo número
+                    de nós pretos.
+                    Essas regras asseguram uma propriedade crítica das árvores rubro-negras: que o caminho mais
+                    longo da raiz a qualquer folha não seja mais do que duas vezes o caminho mais curto da raiz a
+                    qualquer outra folha naquela árvore. O resultado é que a árvore é aproximadamente balanceada.
+                    Como as operações de inserção, remoção, e busca de valores necessitam de tempo de pior caso
+                    proporcional à altura da árvore, este limite proporcional a altura permite que árvores
+                    rubro-negras sejam eficientes no pior caso, diferentemente de árvore de busca binária.
+                    Para perceber por que essas propriedades garantem isto, basta observar que nenhum caminho pode
+                    ter dois nós vermelhos sucessivos, devido à propriedade 4. O caminho mais curto possível tem
+                    todos os nós pretos, e o caminho mais longo possível alterna entre nós vermelhos e pretos. Desde
+                    que todos os caminhos máximos têm o mesmo número de nós pretos, pela propriedade 5, isto mostra
+                    que nenhum caminho é mais do que duas vezes mais longo que qualquer outro caminho.
+                    Em muitas das representações de estruturas de dados em árvore, é possível para um nó pai ter só
+                    um filho, e os nós folha contêm dados. É possível representar árvores rubro-negras neste
+                    paradigma, mas ele modifica várias propriedades e deixa os algoritmos mais complexos. Por essa
+                    razão, este artigo usa "folhas nulas", que não contêm nenhum dado e simplesmente servem para
+                    indicar onde a árvore termina, como mostrado acima. Esses nós muitas vezes são omitidos dos
+                    desenhos, resultando em uma árvore que parece contradizer os princípios acima mencionados, mas
+                    que de fato não faz. Uma conseqüência disto é que todo nó interno (não-folha) têm dois filhos,
+                    embora um ou ambos filhos possam ser folhas nulas.
+                    Alguns explicam uma árvore rubro-negra como uma árvore de busca binária cujas bordas, em vez de
+                    nós, são coloridas em vermelho ou preto, mas isto não faz nenhuma diferença. A cor de um nó na
+                    terminologia deste artigo corresponde à cor da borda que une o nó ao seu pai, exceto que o nó de
+                    raiz é sempre preto (propriedade 2) ao passo que a borda correspondente não existe.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--cards 3 -->
+    <!--Card 2-->
+    <div class="card  w-75 m-auto my-5">
+        <div class="card-group">
+            <div class="card">
+                <img src="../img/redblack_insert.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Operações básicas - Insert </h5>
+                    <p class="card-text">A cada vez que uma operação é realizada na árvore, testa-se este conjunto de
+                        propriedades e são efetuadas rotações e ajuste de cores até que a árvore satisfaça todas estas
+                        regras.
+
+                        Uma rotação é uma operação realizada na árvore para garantir seu balanceamento. A rotação na
+                        árvore rubro-negra pode ser feita à direita e à esquerda, onde são alterados os ponteiros dos
+                        nós rotacionados.
+
+                        Ao inserir-se um elemento em uma árvore rubro-negra, esta é comparada com os elementos e alocada
+                        em sua posição conforme a regra 2. Ao inserir-se um elemento ele é sempre da cor vermelha
+                        (exceto se for o nó raiz). A seguir a árvore analisa o antecessor da folha. Se este for vermelho
+                        será necessário alterar as cores para garantir a regra 4.
+
+                        Uma inserção começa pela adição de um nó de forma semelhante a uma inserção em árvore binária,
+                        pintando-se o nó em vermelho. Diferentemente de uma árvore binária onde sempre adicionamos uma
+                        folha, na árvore rubro-negra as folhas não contém informação, então inserimos um nó vermelho na
+                        parte interna da árvore, com dois nós filhos pretos, no lugar de uma folha preta.
+
+                        O que acontece a seguir depende da cor dos nós vizinhos. O termo nó tio será usado para
+                        referenciar o irmão de um nó pái, como em uma árvore genealógica.</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/altura_redblack.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Altura de um Nó </h5>
+                    <p class="card-text">A altura de um nó nas árvores rubro-negras é calculada através da quantidade de
+                        nós pretos que o caminho entre o nó e sua folha descendente possui, como por invariante os
+                        caminhos traçados a partir de um nó até suas folhas descendentes devem possuir a mesma
+                        quantidade de nós pretos, esses serão sua altura.
+                        Para calcular-se a altura de um nó, existem duas formas possíveis:
+                        Calcular a quantidade de nós pretos a partir do nó escolhido até suas folhas descendentes,
+                        incluindo o nó escolhido (caso seja preto) e excluindo os nós NIL.
+                        Calcular a quantidade de nós pretos a partir do nó escolhido até suas folhas descendentes,
+                        excluindo o nó escolhido, no entanto, contando o nó NIL.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Dados </title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="../img/desenvolvedor.png">
+    <link rel="stylesheet" href="../style/sytle.css">
+
+</head>
+
+<body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../html/index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../html/integrantes.html">Integrantes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Estruturas de Dados
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./btree.html"> Árvores B (B-Tree)</a></li>
+                            <li><a class="dropdown-item" href="./bmais.html">Árvores B+</a></li>
+                            <li><a class="dropdown-item" href="./baster.html">Árvores B*</a></li>
+                            <li><a class="dropdown-item" href="./redblack.html">Árvores Vermelho-preto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Card-->
+    <div class="card  w-75 m-auto my-5">
+        <div class="card">
+            <div class="card-header">
+                Algoritmos e Estruturas de Dados
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Árvores B + </h5>
+                <p class="card-text">Na ciência da computação uma árvore B+ é uma estrutura de dados do tipo árvore
+                    derivada das árvores B, mas com uma forma diferente de armazenamento de suas chaves. Tal organização
+                    confere propriedades, algoritmos de inserção, busca e remoção de chaves diferentes dos utilizados em
+                    árvores B, mas com uma gama de aplicações muito semelhantes em banco de dados e sistemas de
+                    arquivos. Estruturas de dados como essa são muito empregadas em banco de dados e sistemas de
+                    arquivos como o
+                    NTFS para o Microsoft Windows, o sistema de ficheiros ReiserFS para Unix, o XFS para IRIX e Linux, e
+                    o JFS2 para AIX, OS/2 e Linux, usam este tipo de árvore. Assim como as árvores B, as árvores B+
+                    visam reduzir as operações de leitura e escrita em memória
+                    secundária, uma vez que, essas operações são demoradas para um sistema computacional e devem ser
+                    minimizadas sempre que possível.
+                    Para definir uma árvore B+ devemos levar em consideração alguns aspectos relativos ao disco de
+                    memória secundária utilizado e a quantidade de memória primária disponível. Assim, para escolher o
+                    tamanho de uma página de sequence set e, portanto, quantas chaves esta pode armazenar é uma tarefa
+                    dependente do disco utilizado: suponhamos que cada página folha armazene d chaves.
+
+                    O index set, como dito anteriormente, apenas carrega cópias de chaves para referênciar a busca e sua
+                    construção é semelhante ao de uma árvore B. Suponhamos que estes nós internos possam apontar para n
+                    nós filhos, ou seja, uma árvore B com no máximo n-1 chaves por página.
+
+                    Com tais suposições, diferentemente das árvores B, os números d e n-1 não são necessariamente
+                    iguais, mas, manter o tamanho físico em arquivo dessas páginas iguais facilita a implementação da
+                    estrutura e geralmente o melhor a se fazer é manter o tamanho físico em arquivo de ambas as páginas
+                    iguais.
+                </p>
+                <div class="card  w-75 m-auto my-5">
+                    <a href="#" class="btn btn-primary">Assista uma Demonstração</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Card 2-->
+    <div class="card  w-75 m-auto my-5">
+        <div class="card-group">
+            <div class="card">
+                <img src="../img/bmais_busca.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Operações básicas - Busca</h5>
+                    <p class="card-text">A operação de busca sobre uma árvore B+ pode ser realizada de duas maneiras:
+                        iniciando a busca (linear ou binária) pelo apontador para o sequence set ou pelo apontador para
+                        a raíz da árvore. O método mais eficiente é pelo apontador para a raíz na qual é semelhante ao
+                        realizado numa árvore B. Dessa forma quando buscamos uma chave k, percorremos a árvore de cima
+                        para baixo carregando as páginas internas e selecionando a página apontada pelo ponteiro
+                        correspondente ao intervalo no qual pertence k e caso uma cópia de k esteja numa página interna
+                        devemos carregar a página à direita de k. Encontrado uma página folha o algoritmo deve buscar k
+                        nesta e responder se ela se encontra ou não.</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/bmais_inser.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Operações Básicas - Inserção</h5>
+                    <p class="card-text">Durante a inserção de chaves numa árvore B+ as páginas folha podem sofrer
+                        overflow caso já estejam cheias. Assim, após buscar a página folha que uma chave deve ser
+                        inserida, devemos analisar dois casos:
+
+                        Página folha incompleta: Apenas inserimos a chave de maneira a manter a ordenação das chaves.
+                        Caso da figura 1.
+                        Página folha completa: A página folha em questão deve sofrer uma operação de split. Tal operação
+                        cria uma nova página em arquivo dividindo as chaves entre a nova página e a anterior. Assim
+                        devemos escolher uma chave intermediária da sequência formada por todas as chaves da página
+                        folha inclusive a chave a ser inserida e distribuir essas chaves de maneira que a nova página
+                        contenha a chave intermediária e as chaves maiores do que ela e a página anterior contenha as
+                        chaves menores do que a chave intermediária. Após isso a chave intermediária deve ser inserida
+                        no index set semelhante ao processo de inserção em árvores B.
+                    </p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/bmais_remocao.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Operações Básicas - Remoção</h5>
+                    <p class="card-text">A operação de remoção de chaves em árvores B+ pode parecer algo complicado, mas
+                        as mesmas técnicas empregadas em árvores B também aplicam-se aqui. A redistribuição de chaves e
+                        concatenação de páginas são operações mais simples de compreender nessa estrutura contanto que
+                        saibamos qual é a chave separadora de duas páginas adjacentes. Assumindo que essa chave
+                        separadora entre duas páginas adjacentes é a menor chave da página à direita, o index set deve
+                        conter uma cópia dessa chave supondo que nenhuma operação de remoção foi realizada sobre a
+                        árvore.
+                        Por exemplo, na figura 3 a chave separadora do index set das páginas folha que contém as chaves
+                        20 e 30 é o valor 30 que está na raíz do index set. Para as páginas folha que contém as chaves
+                        50 e 60, a chave separadora no index set é o valor 60 e assim por diante para as demais páginas
+                        folha.
+                        Portanto, conhecido a chave que separa duas páginas adjacentes, sabemos que após uma operação de
+                        remoção pode-se ocorrer underflow em suas páginas folha e se isso ocorrer devemos aplicar a
+                        redistribuição de chaves entre o sequence set ou concatenar o conteúdo de páginas adjacentes.
+                        Para cada método deste temos uma alternativa para reconstruir o index set de maneira a mante-lo
+                        organizado adequadamente, lembrando que quando uma chave é removida e o underflow não é
+                        constatado na página, não precisamos fazer nada.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
